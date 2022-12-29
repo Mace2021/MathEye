@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+    <title>MathEye</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+    <script
+            type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"
+            src="index.js"
+    ></script>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+</head>
+<body>
+<nav class="navbar">
+    <img src="MathEye.png" alt="sample" class="navimg" />
+    <h1>MathEye</h1>
+
+    <input
+            type="image"
+            class="donationbtn"
+            name="donation-btn"
+            src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
+            alt="Donate"
+            onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=4GPXHUC5QFMDE')"
+    />
+</nav>
+<header>
+    <div id="setup-game">
+        <div id="diff">
+            <h3>Difficulty:</h3>
+            <leble
+            ><input placeholder="diff"
+                    id="diff1"
+                    type="radio"
+                    name="diff"
+                    value="easy"
+                    checked
+            />Easy
+            </leble>
+            <leble hidden
+            ><input
+                    id="diff2"
+                    type="radio"
+                    name="diff"
+                    value="medium"
+            />Medium</leble
+            >
+            <leble hidden
+            ><input
+                    id="diff3"
+                    type="radio"
+                    name="diff"
+                    value="hard"
+            />Hard</leble
+            >
+        </div>
+        <div id="time">
+            <h3>Choose Time:</h3>
+            <leble
+            ><input placeholder="time" id="time1" type="radio" name="time" value="five" checked />5
+                min</leble
+            >
+            <leble
+            ><input placeholder="time" id="time2" type="radio" name="time" value="ten" />10
+                min</leble
+            >
+            <leble
+            ><input placeholder="time" id="time3" type="radio" name="time" value="fifteen" />15
+                min</leble
+            >
+        </div>
+        <div id="theme">
+            <h3>Choose Theme:</h3>
+            <label
+            ><input
+                    id="theme1"
+                    type="radio"
+                    name="theme"
+                    value="light"
+                    checked
+            />Light</label
+            >
+            <label
+            ><input id="theme2" type="radio" name="theme" value="dark" /> Dark
+            </label>
+        </div>
+    </div>
+</header>
+<div>
+    <h1>Equal 5's</h1>
+    <h4>
+        Fill in the cells using the numbers 1 through 5 and arithmetic
+        operations such that the answer equals 5 as seen below. A number cannot
+        repeat in a Column or Row. The first numbers have been placed to guide you. Good Luck.
+
+    </h4>
+</div>
+
+<div class="imagediv">
+    <img src="MathEye1.png" alt="sample"class="mathEye1"/>
+</div>
+<div class="start-btn">
+    <button id="start-btn" type="button" onclick="startGame()">
+        Start Game
+    </button>
+</div>
+<div id="stats">
+    <p id="timer"></p>
+    <p id="lives"></p>
+</div>
+
+<div id="number-container" class="hidden">
+    <p id="one">1</p>
+    <p id="two">2</p>
+    <p id="three">3</p>
+    <p id="four">4</p>
+    <p id="five">5</p>
+    <p id="plus">+</p>
+    <p id="subtract">-</p>
+    <p id="multiply">*</p>
+    <p id="divid">/</p>
+</div>
+<div id="game">
+    <div id="board"></div>
+</div>
+
+<footer id="dk-footer" class="dk-footer">
+    <div class="footer-social-link">
+        <h5>Follow Us</h5>
+        <ul>
+            <li>
+                <a title="facebook"
+                        rel="noopener"
+                        link="facebook"
+                        href="https://www.facebook.com/elviz.biz/"
+                        target="_blank"
+                >
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a title="twitter"
+                        rel="noopener"
+                        href="https://twitter.com/elvizbiz"
+                        target="_blank"
+                >
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a title="form"
+                        rel="noopener"
+                        href="https://formsubmit.co/el/wapifo"
+                        target="_blank"
+                >
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+            <li>
+                <a title="Linkedin"
+                        rel="noopener"
+                        href="https://www.linkedin.com/in/grievanzes/"
+                        target="_blank"
+                >
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a title="instagram" href="https://www.instagram.com/elvizbiz2021/">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
