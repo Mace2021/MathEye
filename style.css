@@ -1,222 +1,108 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  height: auto;
-}
-@media only screen and (max-width: 1024px) {
-  body {
-    margin: 0px;
-    padding: 0px;
-  }
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-nav {
+.navbar {
   display: flex;
-  padding: 0px;
-  margin: 0px;
-  width: 100%;
-  height:60px;
-  background-color: #1c1002;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
 }
-.navbar > h1 {
-  margin-left: 1px;
-  padding: 5px;
 
-  color: cornflowerblue;
+.navbar h1 {
+  flex-grow: 1;
+  margin: 0;
 }
+
 .navimg {
-  width: 100px;
+  width: 50px;
   height: auto;
-  justify-self: start;
-  padding: 2px;
-  padding-left: 20px;
+  margin-right: 10px;
 }
-.navimg > img {
-  width: 100%;
-}
+
 .donationbtn {
-  margin-left: auto;
-  width: 180px;
+  border: none;
+  background: none;
+}
+
+/* Game Setup Styles */
+#setup-game {
+  display: flex;
+  justify-content: center;
   padding: 20px;
 }
-.hidden {
-  display: none;
+
+#setup-game > div {
+  margin: 0 20px;
 }
-body.dark {
-  background-color: #0a0508;
-  color: #043cab;
-}
-header {
-  display: inline-flex;
-  width: 100%;
-  text-align: center;
-justify-content:space-between;
-  border-bottom: 1px solid;
-}
-h1 {
-  display: block;
-  margin-top: 20px;
-  font-size: 25px;
-  text-align: center;
-  color: #000;
-}
-h3 {
-  margin: 20px;
-  padding: 10px;
-  color: #000;
-}
-h4 {
-  font: 1.5em sans-serif;
-  color: rgb(29, 196, 7);
-  font-weight: bolder;
-  text-align: center;
-  padding-left: 15px;
-  padding-right: 25px;
-}
+
+/* Board and Tiles Styles */
 #board {
-  display: flex;
-  position: relative;
-  padding: 0% 9% 0% 9%;
-
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  gap: 5px;
+  padding: 20px;
   justify-content: center;
-  align-content: flex-start;
-  width: 100%;
-  height: auto;
-  justify-self: center;
-
-  box-sizing: border-box;
-}
-.imagediv {
-  left: 50%;
-  right: 50%;
-}
-.mathEye1 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
 }
 
 .tile {
-  position: relative;
-  border: 3px solid rgb(130, 3, 3);
-  width: 60px;
-  height: 60px;
-  font-weight: bolder;
-  font-size: 41px;
-  flex-basis: 8.9%;
-  text-align: center;
-  justify-content: center;
-}
-p.selected {
-  background-color: #62eea3;
-}
-p.incorrect {
-  color: rgb(240, 7, 7);
-}
-p#timer,
-p#lives {
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
-  color: #ff0000;
-}
-#setup-game {
-  position: relative;
-  margin: 0px;
+  background-color: #eee;
   display: flex;
-  flex-wrap:nowrap;
+  align-items: center;
   justify-content: center;
-  width: 100%;
-  background-color: #07deff;
-  justify-content:space-between;
+  height: 50px;
+  border: 1px solid #ddd;
+  cursor: pointer;
 }
 
-.start-btn {
-  display: flex;
-
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-}
-
-#start-btn {
-  font-size: 25px;
-  border-radius: 10px;
-  background-color: greenyellow;
-}
 .bottomBorder {
-  border-bottom: 4px solid blue;
-}
-#number-container {
-  position: relative;
-  display: inline-flex;
-  width: 100%;
-  border: solid rgb(13, 218, 20);
-  border-radius: 15px;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-}
-#number-container > p {
-  border: 1px solid rgb(162, 49, 237);
-  border-radius: 10px;
-  justify-items: center;
-  font-size: 35px;
-  margin: 5px;
-  padding: 6px;
+  border-bottom: 2px solid #333;
 }
 
-footer {
-  display: flex;
-  box-sizing: border-box;
-  margin-top: 0px;
-  width: 100%;
-  padding: 5px;
-  height: auto;
-  background-color: #b4f72d;
-  font-size: x-large;
-  color: #23211e;
-}
-ul {
-  display: flex;
-  list-style: none;
-  justify-content: space-evenly;
-  margin-left: 30px;
-  justify-content: center;
-}
-li {
-  margin: 25px;
-  justify-items: center;
+.selected {
+  background-color: #dcdcdc;
 }
 
-@media only screen and (max-width: 786px) {
-  body {
-    margin: 0px;
-    padding: 0px;
-  }
+.incorrect {
+  background-color: #ffcccc;
 }
-@media only screen and (max-width: 370px) {
-  body {
-    margin: 0px;
-    padding: 0px;
-  }
-}
-@media (orientation: landscape) and (min-width: 1080px) {
-  body {
-    margin: 0px;
-    padding: 0px;
-    font-size: 36px;
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar h1, .imagediv img {
+    display: none; /* Hide on smaller screens */
   }
 
-  .donationbtn {
-    margin-left: auto;
-    width: 180px;
-    padding: 20px;
-
-    background-color: #b4f72d;
+  #setup-game {
+    flex-direction: column;
+    align-items: center;
   }
 
+  #setup-game > div {
+    margin: 10px 0;
+  }
+
+  #board {
+    grid-template-columns: repeat(8, 1fr); /* Adjust grid for smaller screens */
+  }
+
+  .tile {
+    height: 40px; /* Smaller tiles on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  #board {
+    grid-template-columns: repeat(5, 1fr); /* Further adjust grid for very small screens */
+  }
 }
